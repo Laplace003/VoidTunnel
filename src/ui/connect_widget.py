@@ -180,6 +180,17 @@ class ConnectWidget(QWidget):
         refresh_btn.clicked.connect(self._refresh_ips)
         ip_layout.addWidget(refresh_btn)
         
+        # Eye toggle button for IP privacy
+        self.ip_visible = False
+        self.real_ip_actual = ""
+        self.proxy_ip_actual = ""
+        
+        self.eye_btn = QPushButton("👁️")
+        self.eye_btn.setObjectName("iconButton")
+        self.eye_btn.setToolTip("Show/Hide IP addresses")
+        self.eye_btn.clicked.connect(self._toggle_ip_visibility)
+        ip_layout.addWidget(self.eye_btn)
+        
         layout.addWidget(ip_card)
         
         layout.addStretch()
@@ -345,7 +356,8 @@ class ConnectWidget(QWidget):
         def get_ip():
             ip = get_public_ip(use_proxy=False)
             if ip:
-                self.real_ip_label.setText(ip)
+                self.real_ip_actual = ip
+                self._update_ip_display()
         
         threading.Thread(target=get_ip, daemon=True).start()
     
@@ -356,12 +368,46 @@ class ConnectWidget(QWidget):
             ip = get_public_ip(
                 use_proxy=True,
                 proxy_host="127.0.0.1",
-                proxy_port=self.settings.get("http_port", 10809)  # Use HTTP port
+                proxy_port=self.settings.get("http_port", 10809)
             )
             if ip:
-                self.proxy_ip_label.setText(ip)
+                self.proxy_ip_actual = ip
+                self._update_ip_display()
         
         threading.Thread(target=get_ip, daemon=True).start()
+    
+    def _toggle_ip_visibility(self):
+        """Toggle IP address visibility"""
+        self.ip_visible = not self.ip_visible
+        self.eye_btn.setText("🙈" if self.ip_visible else "👁️")
+        self.eye_btn.setToolTip("Hide IP addresses" if self.ip_visible else "Show IP addresses")
+        self._update_ip_display()
+    
+    def _update_ip_display(self):
+        """Update IP labels based on visibility setting"""
+        if self.ip_visible:
+            # Show actual IPs
+            if self.real_ip_actual:
+                self.real_ip_label.setText(self.real_ip_actual)
+            if self.proxy_ip_actual:
+                self.proxy_ip_label.setText(self.proxy_ip_actual)
+        else:
+            # Show masked IPs
+            if self.real_ip_actual:
+                self.real_ip_label.setText(self._mask_ip(self.real_ip_actual))
+            else:
+                self.real_ip_label.setText("xxx.xxx.xxx.xxx")
+            if self.proxy_ip_actual:
+                self.proxy_ip_label.setText(self._mask_ip(self.proxy_ip_actual))
+            else:
+                self.proxy_ip_label.setText("xxx.xxx.xxx.xxx")
+    
+    def _mask_ip(self, ip: str) -> str:
+        """Mask an IP address for privacy"""
+        parts = ip.split('.')
+        if len(parts) == 4:
+            return f"xxx.xxx.{parts[2]}.xxx"
+        return "xxx.xxx.xxx.xxx"
     
     def _update_traffic_stats(self):
         """Update traffic statistics by reading network stats"""
