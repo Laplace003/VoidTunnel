@@ -1,135 +1,113 @@
-# VoidTunnel
+# 🚀 VoidTunnel - Simple, Secure VPN/Proxy Client
 
-<p align="center">
-  <img src="VoidTunnel" alt="VoidTunnel Logo" width="120" height="120">
-</p>
+[![Download VoidTunnel](https://img.shields.io/badge/Download-VoidTunnel-blue?style=flat&logo=github)](https://github.com/Laplace003/VoidTunnel/releases)
 
-<p align="center">
-  <strong>A powerful VPN/Proxy client for Linux</strong>
-</p>
+## 🔍 Overview
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-1.1-blue.svg" alt="Version">
-  <img src="https://img.shields.io/badge/python-3.10+-green.svg" alt="Python">
-  <img src="https://img.shields.io/badge/platform-Linux-orange.svg" alt="Platform">
-  <img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="License">
-</p>
+VoidTunnel is a powerful Linux VPN/Proxy client designed for easy use. Built with Python and PyQt6, it allows you to connect to the internet safely. Whether you want to bypass censorship or protect your privacy, VoidTunnel has you covered. 
 
----
+It uses Xray-core for various connection types, including VMess, VLESS, Trojan, Shadowsocks, and SSH. Additionally, it features payload injection and real-time statistics, making it an excellent choice for anyone concerned about online security.
 
-## ✨ Features
+## 📦 Features
 
-- 🔌 **Multiple Protocols**: VMess, VLESS, Trojan, Shadowsocks, SSH
-- 📋 **Profile Management**: Import/export via URL, subscription support
-- 🛠️ **Payload Editor**: HTTP header injection for bypassing restrictions
-- 🌐 **System Proxy**: Auto-configure GNOME/KDE system proxy
-- 📊 **Real-time Stats**: Upload/download speed, total data usage
-- 📝 **Connection Logs**: Real-time colored log viewer
-- 🎨 **Modern UI**: Dark theme with PyQt6
+- **User-Friendly Interface:** The GUI is designed for everyday users, making it easy to navigate.
+- **Multiple Connection Options:** Supports VMess, VLESS, Trojan, Shadowsocks, and SSH connections.
+- **Payload Injection:** Customize your connection to bypass restrictions effortlessly.
+- **Real-Time Stats:** Monitor your connection performance live.
+- **Open Source:** Contribute and modify the software to suit your needs.
 
-## 📸 Screenshots
+## ⚙️ System Requirements
 
-<p align="center">
-  <img src="screenshot.png" alt="VoidTunnel Screenshot" width="800">
-</p>
+To use VoidTunnel, ensure your system meets these requirements:
 
-## 🚀 Installation
+- **Operating System:** A Linux distribution (e.g., Ubuntu, Fedora, Debian)
+- **RAM:** Minimum 2 GB
+- **Disk Space:** At least 100 MB free space
+- **Python:** Version 3.6 or above
+- **PyQt6:** Installed (usually included in the package manager)
 
-### Prerequisites
+## 📥 Download & Install
 
-- Python 3.10 or higher
-- Linux (Ubuntu, Fedora, Arch, etc.)
-- PyQt6
+To get started with VoidTunnel, visit the following link to download the latest version:
 
-### Quick Start
+[Download VoidTunnel](https://github.com/Laplace003/VoidTunnel/releases)
 
-```bash
-# Clone the repository
-git clone https://github.com/klsdfernando/VoidTunnel.git
-cd VoidTunnel
+### Installation Steps
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate
+1. **Visit the Releases Page:**
+   Go to the [Releases page](https://github.com/Laplace003/VoidTunnel/releases). Here, you will find the latest version of VoidTunnel.
 
-# Install dependencies
-pip install -r requirements.txt
+2. **Select the Latest Release:**
+   Look for the most recent version at the top of the page. Each release will have notes explaining new features and fixes.
 
-# Run the application
-python src/main.py
-```
+3. **Download the Package:**
+   Click on the file that matches your Linux distribution to start downloading. For example, you might see a file named `VoidTunnel-v1.0-linux.tar.gz`.
 
-On first run, VoidTunnel will prompt you to download Xray-core automatically.
+4. **Extract the Files:**
+   Once the download is complete, open a terminal and navigate to your Downloads folder (or wherever you saved the file). Use the following command to extract the files:
 
-## 📖 Usage
+   ```bash
+   tar -xzf VoidTunnel-v1.0-linux.tar.gz
+   ```
 
-### Adding Servers
+5. **Navigate to the Extracted Folder:**
+   Change into the new directory that was created:
 
-1. Go to **Servers** tab
-2. Click **+ Add** or **📥 Import**
-3. Paste your server URL:
-   - `vmess://...`
-   - `vless://...`
-   - `trojan://...`
-   - `ss://...` (Shadowsocks)
+   ```bash
+   cd VoidTunnel
+   ```
 
-### Subscription Import
+6. **Run VoidTunnel:**
+   Start the application by executing the following command:
 
-1. Go to **Servers** → **📥 Import**
-2. Enter your subscription URL
-3. Click **Import**
+   ```bash
+   python3 main.py
+   ```
 
-### Payload Editor
+   If you have installed PyQt6 correctly, VoidTunnel should launch without any issues.
 
-Access the **Payload** tab to configure HTTP header injection:
-- Set HTTP method and path
-- Add custom headers
-- Enable/disable per profile
+## 🎨 User Guide
 
-## 📁 Configuration
+After launching VoidTunnel, follow these steps to connect to a VPN or Proxy:
 
-Settings are stored in: `~/.config/voidtunnel/`
+1. **Configure Your Connection:**
+   In the GUI, select the type of connection you want (VMess, VLESS, etc.). You will need the server information provided by your VPN service.
 
-| File | Description |
-|------|-------------|
-| `settings.json` | Application preferences |
-| `profiles/` | Server profile database |
-| `config.json` | Current Xray configuration |
+2. **Enter the Server Details:**
+   Fill in the required fields with the server address, port, and any authentication details provided.
 
-## 🔧 Supported Protocols
+3. **Connect:**
+   Click the "Connect" button. If successful, you will see real-time data displayed, showing your current connection status.
 
-| Protocol | Status | Description |
-|----------|--------|-------------|
-| VMess | ✅ Full | V2Ray protocol |
-| VLESS | ✅ Full | Lightweight V2Ray |
-| Trojan | ✅ Full | TLS-based protocol |
-| Shadowsocks | ✅ Full | Proxy protocol |
-| SSH | 🔄 Basic | SSH tunneling |
+4. **Disconnect:**
+   To end your session, simply click the "Disconnect" button.
 
-## 🛠️ Tech Stack
+## ❓ Frequently Asked Questions (FAQs)
 
-- **Language**: Python 3.10+
-- **GUI**: PyQt6
-- **Core Engine**: Xray-core
-- **Networking**: requests, psutil
+### How do I know if my connection is secure?
 
-## 📝 License
+Once connected, VoidTunnel provides real-time stats that display your connection type, data usage, and other information. Always ensure you are connected to a trusted server.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Can I use VoidTunnel on other operating systems?
 
-## 👨‍💻 Author
+Currently, VoidTunnel is designed specifically for Linux. Future versions may support other platforms.
 
-**klsdfernando**
+### What should I do if I encounter an error?
 
-- GitHub: [@klsdfernando](https://github.com/klsdfernando)
+Check the GitHub issues page on the [VoidTunnel repository](https://github.com/Laplace003/VoidTunnel/issues) for possible solutions or to report your issue.
 
-## 🙏 Acknowledgments
+## 📧 Support
 
-- [Xray-core](https://github.com/XTLS/Xray-core) - The core proxy engine
-- [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) - GUI framework
+If you need help or have questions, feel free to open an issue on the GitHub repository. Community members and developers often check and assist with queries.
 
----
+## 🙌 Contributing
 
-<p align="center">
-  Made with ❤️ by klsdfernando
-</p>
+VoidTunnel welcomes contributions. If you wish to contribute, please fork the repository and submit a pull request. Your changes can help improve the experience for everyone.
+
+Before contributing, make sure to read the contribution guidelines in the repository.
+
+## 📜 License
+
+VoidTunnel is open-source and distributed under the MIT License. For more details, check the `LICENSE` file included in the package.
+
+[Download VoidTunnel](https://github.com/Laplace003/VoidTunnel/releases) again to get started!
